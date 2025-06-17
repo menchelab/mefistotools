@@ -137,6 +137,7 @@ def plot_model_evaluations(
     model_file, 
     obs, 
     plot_prefix, 
+    time_column,
     n_factors = 10, 
     n_rows_factors = 2, 
     n_cols_factors = 5,
@@ -186,7 +187,7 @@ def plot_model_evaluations(
     factors = list(range(n_factors)) if isinstance(n_factors, int) else n_factors
     fig = plot_factors(
         m, 
-        'timefactor', 
+        time_column, 
         factors, 
         group_column, 
         n_rows_factors, 
